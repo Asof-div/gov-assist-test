@@ -12,7 +12,7 @@ const Unauthenticated = ({theme}) => {
     return (
         <HStack spacing={4}>
             
-            <Link to={{ pathname: "/chat", state: { from: location } }}>
+            <Link to={{ pathname: "#", state: { from: location } }}>
                 <Button 
                     bgColor={ElementColor.transparent}
                     color={theme === 'dark' ? ElementColor.white : ElementColor.primary}
