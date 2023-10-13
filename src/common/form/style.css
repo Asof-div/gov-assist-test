@@ -1,0 +1,39 @@
+.phone-input-btn {
+    width: 15%;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.phone-input-btn.flag-dropdown.open {
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+
+.phone-input-btn > div {
+    width: 100% !important;
+    padding: 0 !important;
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.phone-input-btn.flag-dropdown.open > div {
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+.phone-input-btn.flag-dropdown.open:hover > .selected-flag {
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+.phone-input-btn.flag-dropdown:hover > .selected-flag {
+    border-top-left-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+}
+
+.phone-input-btn > ul {
+    left: 10px;
+    top: 100%;
+}

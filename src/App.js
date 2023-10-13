@@ -1,4 +1,6 @@
+import './App.css';
 import React from 'react';
+import Routes from './routes';
 import {
   ChakraProvider,
   Box,
@@ -7,36 +9,24 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  extendTheme,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+const theme = extendTheme({
+  fonts: {
+    heading: `'Inter', sans-serif`,
+    body: `'Inter', sans-serif`,
+  },
+})
+
 
 function App() {
-  return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
-  );
+    return (
+        <ChakraProvider theme={theme}>
+            <Routes />	
+        
+        </ChakraProvider>
+    );
 }
 
 export default App;

@@ -1,0 +1,53 @@
+.chakra-step__separator[data-status=complete] {
+    background: #fff !important;
+}
+
+
+.chakra-step__indicator[data-status=complete] {
+    background: #fff !important;
+}
+
+.chakra-step__indicator[data-status=active] {
+    background: #fff;
+    border-color: #fff;
+
+}
+.chakra-step__separator {
+    background: #F7F8F9;
+}
+
+.react-tel-input .flag-dropdown {
+    position: relative;
+    border-width: 0 !important;
+    background-color: transparent !important;
+    padding-right: 5px !important;
+
+    /* min-width: 100px; */
+}
+.react-tel-input .flag-dropdown::after{
+    content: '';
+    background-color: #01264A;
+    width: 1px;
+    height: 40px !important;
+    top: 0;
+    right: 0;
+    border-right: '1px solid black' !important;
+    position: absolute;
+    display: block;
+    /* min-width: 100px; */
+}
+
+.react-tel-input {
+    position: relative;
+    /* min-width: 100px; */
+}
+
+.react-tel-input .form-control {
+    border-width: 0 !important;
+    border-bottom-width: 1px !important;
+    border-radius: 0 !important;
+    height: 50px !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+        /* min-width: 100px; */
+}
