@@ -6,30 +6,32 @@ import { TiThMenu } from 'react-icons/ti';
 import Sidebar from './sidebar';
 import { ElementColor } from '../../../../constants/colors';
 
-
 function HeaderLeft({ theme, isAuthenticated, isHost }) {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
-
-    return (
-        <React.Fragment>
-            <HStack spacing={3}>
-                <IconButton
-                    variant="unstyled"
-                    icon={<TiThMenu size='30px' color={theme === 'dark' ? ElementColor.white : ElementColor.primary} />}
-                    aria-label="open menu"
-                    onClick={onOpen}
-                />
-                <Link to="/" >
-                    <Image src={Logo} width='160px' alt='Gov Assist'/>
-                </Link>
-            </HStack>
-            <Sidebar
-                show={isOpen}
-                toggleSideBar={onClose}
+  return (
+    <React.Fragment>
+      <HStack spacing={1}>
+        <IconButton
+          variant="unstyled"
+          icon={
+            <TiThMenu
+              size="30px"
+              color={
+                theme === 'dark' ? ElementColor.white : ElementColor.primary
+              }
             />
-        </React.Fragment>
-    )
+          }
+          aria-label="open menu"
+          onClick={onOpen}
+        />
+        <Link to="/">
+          <Image src={Logo} width="160px" alt="Gov Assist" />
+        </Link>
+      </HStack>
+      <Sidebar show={isOpen} toggleSideBar={onClose} />
+    </React.Fragment>
+  );
 }
 
-export default HeaderLeft
+export default HeaderLeft;
