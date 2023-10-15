@@ -1,4 +1,4 @@
-import { HStack, Box, Spacer, Text, VStack, Flex, Stack, useDisclosure, Card, CardBody, ListItem, ListIcon, List, Image } from '@chakra-ui/react'
+import { HStack, Box, Spacer, Text, VStack, Flex, Stack, Heading, Card, CardBody, ListItem, ListIcon, List, Image } from '@chakra-ui/react'
 import React, { useMemo, useState } from 'react'
 import { MdCheckCircle, MdDoubleArrow, MdSettings } from 'react-icons/md'
 import DesktopBack from "../../../assets/img/Home.svg"
@@ -54,21 +54,46 @@ const HomeSearchScreen = () => {
                         justify='center'
                         width={'100%'}
                         maxWidth={'1400px'}
+                        flexDirection={['column', 'column', 'column', 'row']}
                         py={14}
                     >
                         <Flex padding='10px'>
                             <VStack alignItems='flex-start' spacing={'14'}>
                                 <Box>
-                                    <Text fontWeight={'700'} lineHeight='68px' fontSize='6xl' color={ElementColor.white}>
-                                    <Text  color={ElementColor.green}>Win the right to live </Text>
-                                    in the USA!</Text>
+                                    <Heading
+                                        fontWeight={'700'}
+                                        lineHeight="68px"
+                                        size="3xl"
+                                        color={ElementColor.white}
+                                    >
+                                        <Text color={ElementColor.green}>
+                                        Win the right to live{' '}
+                                        </Text>
+                                        in the USA!
+                                    </Heading>
                                 </Box>
-                                <Box display='flex'>
-                                    <Box borderLeft="3px solid gray" paddingLeft='5px' maxWidth='250px' minHeight='100%'><Text textAlign='left' lineHeight='29px' fontSize="2xl" color="white">The official deadline is running, so hurry up and apply here!</Text></Box>
-                                    <Box> 
+
+                                <Flex flexDir={['column', null, 'row']} gap="8">
+                                    <Box
+                                        borderLeft="3px solid gray"
+                                        paddingLeft="5px"
+                                        maxWidth={['full', '80%', '250px']}
+                                        minHeight={{ lg: '100%' }}
+                                    >
+                                        <Text
+                                        textAlign="left"
+                                        lineHeight="29px"
+                                        fontSize="2xl"
+                                        color="white"
+                                        >
+                                        The official deadline is running, so hurry up and apply
+                                        here!
+                                        </Text>
+                                    </Box>
+                                    <Box>
                                         <CountDown />
                                     </Box>
-                                </Box>
+                                </Flex>
                                 <Box>
 
                                                 
@@ -105,7 +130,7 @@ const HomeSearchScreen = () => {
 
                         <Spacer />
 
-                        <Flex padding='10px' flex={1} minW={'lg'} >
+                        <Flex padding={{ lg: '10px' }} flex={1} minW={['0', 'lg']}>
                             <Card flex={1}>
                             <CardBody>
                                 <GreenCardForm />
